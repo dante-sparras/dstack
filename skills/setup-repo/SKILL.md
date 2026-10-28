@@ -390,7 +390,6 @@ Install these in every repo, without asking:
 
 | Source | Skills | Except |
 | --- | --- | --- |
-| `t3dotgg/tstack#92e38e2cf677a84a142e8df296861c588542135c` | `babysit-pr` | |
 | `mattpocock/skills#59db609eb1e18aaf59b63284d0e52255aff0c63c` | `'*'` | `git-guardrails-claude-code` `migrate-to-shoehorn` `scaffold-exercises` `setup-pre-commit` `chief-of-staff` `claude-handoff` `loop-me` `setup-ts-deep-modules` `writing-beats` `writing-fragments` `writing-shape` |
 | `dante-sparras/dstack` | `'*'` | `setup-repo` |
 
