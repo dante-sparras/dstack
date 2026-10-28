@@ -27,6 +27,7 @@ npx skills update
 
 | Skill | Description |
 | --- | --- |
+| [moa](skills/moa/SKILL.md) | Mixture of Agents: sends one task to several independent agents, possibly on different models, and aggregates their answers. For reviews, designs, plans, hard bugs, and choosing between patches. |
 | [setup-repo](skills/setup-repo/SKILL.md) | Sets up an existing repo, or scaffolds a new project, with the standard baseline: AGENTS.md, CONTRIBUTING.md, `.github/` templates and workflows, docs, license, and GitHub settings. |
 
 ## Adding a skill
