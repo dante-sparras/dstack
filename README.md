@@ -9,7 +9,7 @@ My personal collection of agent skills, installable with the [`skills`](https://
 npx skills add dante-sparras/dstack
 
 # One skill
-npx skills add dante-sparras/dstack --skill hello-dstack
+npx skills add dante-sparras/dstack --skill setup-repo
 
 # Everything, globally, for Claude Code, no prompts
 npx skills add dante-sparras/dstack -g -a claude-code -y
@@ -27,7 +27,7 @@ npx skills update
 
 | Skill | Description |
 | --- | --- |
-| [hello-dstack](skills/hello-dstack/SKILL.md) | Smoke test that confirms dstack skills are installed. |
+| [setup-repo](skills/setup-repo/SKILL.md) | Sets up an existing repo, or scaffolds a new project, with the standard baseline: AGENTS.md, CONTRIBUTING.md, `.github/` templates and workflows, docs, license, and GitHub settings. |
 
 ## Adding a skill
 

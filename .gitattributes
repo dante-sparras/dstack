@@ -1,0 +1,5 @@
+# Normalize line endings to LF everywhere; core.autocrlf on Windows would otherwise check out CRLF.
+* text=auto eol=lf
+# Batch files need CRLF for cmd.exe to parse them reliably.
+*.cmd text eol=crlf
+*.bat text eol=crlf
