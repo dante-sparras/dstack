@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Mixture of Agents
 
-Several **proposers** answer the same task without seeing each other. One **aggregator** reads every proposal and writes the final answer. The gain comes from a strong aggregator that can read several good attempts; it fades when weak proposals dilute the pool. [references/research.md](references/research.md) has the evidence behind every default below; read it only when the user asks why, or wants a default changed.
+Several **proposers** answer the same task without seeing each other. One **aggregator** reads every proposal and writes the final answer. The gain comes from a strong aggregator that can read several good attempts; it fades when weak proposals dilute the pool.
 
 You are the aggregator unless the user names another model for that seat.
 
