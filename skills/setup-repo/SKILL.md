@@ -473,7 +473,7 @@ On Windows, run these commands in Git Bash; PowerShell breaks the quoting.
 | SHA-pinned actions | Only SHA-pinned actions allowed. Name any existing workflows that get pinned or given permissions. | Always; deferred with a guarded `main` |
 | Approval for outside contributors | Outside contributors' PRs wait for your approval before their workflows run | Public |
 | Immutable releases | Immutable releases: a published release's tag and files can't be changed. A later job that uploads build files needs release-please to create drafts (`"draft": true`) first. | Versioned releases |
-| Ruleset on `main` | A ruleset on `main`: every change through a PR with passing checks, no bypass | It applies (see Conditions); deferred with a guarded `main`; always last |
+| Ruleset on `main` | A ruleset on `main`: every change through a PR with passing checks, run on top of the latest `main` (the branch must be up to date), and CodeQL findings block the merge; no bypass | It applies (see Conditions); deferred with a guarded `main`; always last |
 
 ### Setting can't be applied
 
@@ -610,6 +610,11 @@ gh api -X PUT repos/OWNER/REPO/immutable-releases
 ### Ruleset on `main`
 
 Apply it last, and only when the precheck in Conditions passes on `origin/<default>`.
+
+`ruleset.json` has two rules that came from real breakage:
+
+- **Up to date before merging** (`strict_required_status_checks_policy: true`). Without it, two PRs that each pass on their own can break `main` once both merge, because neither ran CI on top of the other. Auto-merge doesn't update a branch that falls behind: the PR's author (or agent) updates it with the "Update branch" button or `gh pr update-branch`.
+- **CodeQL blocks merges** (the `code_scanning` rule: security alerts of high or above, and errors). Keep it only when CodeQL runs on PRs: CodeQL default setup reads back `configured`, or `.github/workflows/` has a CodeQL workflow. Otherwise remove that rule from the JSON before applying it, since a PR waiting for CodeQL results that never come can't merge.
 
 ```sh
 # Read: find this repo's own ruleset named "main" (org rulesets can't be changed here), then compare only

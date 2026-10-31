@@ -80,6 +80,7 @@ If an AI agent did the work, end the description with the model and the tool you
 
 <!-- optional:ruleset -->
 - Every change reaches `{{DEFAULT_BRANCH}}` through a PR, and the required checks ({{REQUIRED_CHECKS}}) must pass first.
+- Your branch must be up to date with `{{DEFAULT_BRANCH}}` before it merges, so the checks run on the code that will actually land. If it falls behind, update it (the "Update branch" button, or `gh pr update-branch`) and let the checks run again.
 <!-- /optional:ruleset -->
 - PRs are squash-merged. Your PR title becomes the commit message on `{{DEFAULT_BRANCH}}`, so make it readable on its own.
 <!-- optional:releases -->
