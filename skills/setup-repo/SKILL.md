@@ -72,7 +72,7 @@ Every question follows [references/asking.md](references/asking.md); read it bef
 
 In this file, each question has the same shape: a heading with its number and title (Q1 to Q10), an **Ask:** line with the question worded for its usual recommendation, its choices as a list when it has them, a **Recommend:** line when there is a recommendation, and then its rules. These numbers are for this file; in a message, number the questions you send from Q1, as [references/asking.md](references/asking.md) says.
 
-`OWNER/REPO` means the GitHub repository throughout, such as `dante-sparras/dstack`. `main` means the repo's default branch; in commands, `<default>` is its real name.
+`OWNER/REPO` means the GitHub repository throughout, such as `dante-sparras/skills`. `main` means the repo's default branch; in commands, `<default>` is its real name.
 
 ## Conditions
 
@@ -391,7 +391,7 @@ Install these in every repo, without asking:
 | Source | Skills | Except |
 | --- | --- | --- |
 | `mattpocock/skills#59db609eb1e18aaf59b63284d0e52255aff0c63c` | `'*'` | `git-guardrails-claude-code` `migrate-to-shoehorn` `scaffold-exercises` `setup-pre-commit` `chief-of-staff` `claude-handoff` `loop-me` `setup-ts-deep-modules` `writing-beats` `writing-fragments` `writing-shape` |
-| `dante-sparras/dstack` | `'*'` | `setup-repo` |
+| `dante-sparras/skills` | `'*'` | `setup-repo` |
 
 From the repo root, run one `add` per row, then one `remove` with every skill in the Except column:
 

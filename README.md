@@ -1,4 +1,4 @@
-# dstack
+# skills
 
 My personal collection of agent skills, installable with the [`skills`](https://github.com/vercel-labs/skills) CLI.
 
@@ -6,16 +6,16 @@ My personal collection of agent skills, installable with the [`skills`](https://
 
 ```sh
 # Interactive: pick skills and agents
-npx skills add dante-sparras/dstack
+npx skills add dante-sparras/skills
 
 # One skill
-npx skills add dante-sparras/dstack --skill setup-repo
+npx skills add dante-sparras/skills --skill setup-repo
 
 # Everything, globally, for Claude Code, no prompts
-npx skills add dante-sparras/dstack -g -a claude-code -y
+npx skills add dante-sparras/skills -g -a claude-code -y
 
 # List what's available without installing
-npx skills add dante-sparras/dstack --list
+npx skills add dante-sparras/skills --list
 
 # Pull in updates
 npx skills update
